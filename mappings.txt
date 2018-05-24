@@ -2,7 +2,7 @@
   "mappings": {
     "data": {
       "properties": {
-        "transit": { 
+        "transit_join": { 
           "type": "join",
           "relations": {
             "trips": "stoptimes"
@@ -14,15 +14,7 @@
         "service_id": { "type": "keyword" },
         "shape_id": { "type": "keyword" },
         "trip_id": { "type": "keyword" },
-        "stop": {
-	        "type": "nested",
-          "properties": {
-            "name_stop": { "type": "keyword" },
-            "stop_id": { "type": "integer" },
-            "lat": { "type": "double" },
-            "lon": { "type": "double" }
-          }
-        },
+        "name_stop": { "type": "keyword" },
         "arrival_time": { "type": "date", "format": "HH:mm:ss" },
         "departure_time": { "type": "date", "format": "HH:mm:ss" },
         "stop_sequence":{ "type":"integer" }
@@ -30,4 +22,3 @@
     }    
   }
 }
-
