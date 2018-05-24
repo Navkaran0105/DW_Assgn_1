@@ -1,0 +1,21 @@
+require 'json'
+
+trips_data = File.read('trips_array.json')
+trips_parsed = JSON.parse(trips_data)
+
+File.open('trips_indexed.json', 'w') do |file|
+  trips_parsed.each do |record|
+    index = {
+      "index": {
+        "_index": "transit",
+        "_type": "data",
+        "_id": record["trip_id"]
+      }
+    }
+    record = record.merge({ "transit_join": "trips" })
+    file.write index.to_json
+	file.write "\n"
+    file.write record.to_json
+	file.write "\n"
+  end
+end

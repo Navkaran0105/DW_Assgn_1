@@ -1,0 +1,313 @@
+Outputs:
+
+a:
+
+{
+	"took": 14,
+	"timed_out": false,
+	"_shards": {
+		"total": 5,
+		"successful": 5,
+		"skipped": 0,
+		"failed": 0
+	},
+	"hits": {
+		"total": 295,
+		"max_score": 0.0,
+		"hits": []
+	},
+	"aggregations": {
+		"distinct": {
+			"doc_count_error_upper_bound": 0,
+			"sum_other_doc_count": 0,
+			"buckets": [
+				{
+					"key": "10 WESTPHAL",
+					"doc_count": 171
+				},
+				{
+					"key": "14 DOWNTOWN",
+					"doc_count": 122
+				},
+				{
+					"key": "10 BRIDGE TERMINAL",
+					"doc_count": 2
+				}
+			]
+		}
+	}
+}
+
+
+b:
+
+{
+	"took": 35,
+	"timed_out": false,
+	"_shards": {
+		"total": 5,
+		"successful": 5,
+		"skipped": 0,
+		"failed": 0
+	},
+	"hits": {
+		"total": 3063,
+		"max_score": 0.0,
+		"hits": []
+	},
+	"aggregations": {
+		"distinct": {
+			"doc_count_error_upper_bound": 42,
+			"sum_other_doc_count": 2456,
+			"buckets": [
+				{
+					"key": "1 SPRING GARDEN TO MUMFORD",
+					"doc_count": 95
+				},
+				{
+					"key": "1 SPRING GARDEN TO BRIDGE TERMINAL",
+					"doc_count": 94
+				},
+				{
+					"key": "52 CROSSTOWN TO BAYERS LAKE",
+					"doc_count": 61
+				},
+				{
+					"key": "FERRY TO HALIFAX",
+					"doc_count": 60
+				},
+				{
+					"key": "22 ARMDALE TO MUMFORD",
+					"doc_count": 52
+				},
+				{
+					"key": "80 SACKVILLE",
+					"doc_count": 52
+				},
+				{
+					"key": "80 HALIFAX",
+					"doc_count": 50
+				},
+				{
+					"key": "82 MILLWOOD",
+					"doc_count": 49
+				},
+				{
+					"key": "10 DALHOUSIE",
+					"doc_count": 48
+				},
+				{
+					"key": "7 ROBIE",
+					"doc_count": 46
+				}
+			]
+		}
+	}
+}
+
+c:
+{
+	"took": 41,
+	"timed_out": false,
+	"_shards": {
+		"total": 5,
+		"successful": 5,
+		"skipped": 0,
+		"failed": 0
+	},
+	"hits": {
+		"total": 34,
+		"max_score": 1.0,
+		"hits": [
+			{
+				"_index": "transit",
+				"_type": "data",
+				"_id": "VPXoj2MBj7ZKb5OJuQWP",
+				"_score": 1.0,
+				"_routing": "6521764-2012_08A-1208BRwd-Weekday-01",
+				"_source": {
+					"trip_id": "6521764-2012_08A-1208BRwd-Weekday-01",
+					"arrival_time": "06:55:00",
+					"departure_time": "06:55:00",
+					"stop_id": 6940,
+					"stop_sequence": 1,
+					"transit_join": {
+						"name": "stoptimes",
+						"parent": "6521764-2012_08A-1208BRwd-Weekday-01"
+					},
+					"name_stop": "hubley Centre"
+				}
+			},
+			{
+				"_index": "transit",
+				"_type": "data",
+				"_id": "VfXoj2MBj7ZKb5OJuQWP",
+				"_score": 1.0,
+				"_routing": "6521764-2012_08A-1208BRwd-Weekday-01",
+				"_source": {
+					"trip_id": "6521764-2012_08A-1208BRwd-Weekday-01",
+					"arrival_time": "07:36:00",
+					"departure_time": "07:36:00",
+					"stop_id": 9061,
+					"stop_sequence": 2,
+					"transit_join": {
+						"name": "stoptimes",
+						"parent": "6521764-2012_08A-1208BRwd-Weekday-01"
+					},
+					"name_stop": "albemarle St after Duke St (metrox)"
+				}
+			},
+			{
+				"_index": "transit",
+				"_type": "data",
+				"_id": "Hvboj2MBj7ZKb5OJ_lIw",
+				"_score": 1.0,
+				"_routing": "6521761-2012_08A-1208BRwd-Weekday-01",
+				"_source": {
+					"trip_id": "6521761-2012_08A-1208BRwd-Weekday-01",
+					"arrival_time": "05:50:00",
+					"departure_time": "05:50:00",
+					"stop_id": 6940,
+					"stop_sequence": 1,
+					"transit_join": {
+						"name": "stoptimes",
+						"parent": "6521761-2012_08A-1208BRwd-Weekday-01"
+					},
+					"name_stop": "hubley Centre"
+				}
+			},
+			{
+				"_index": "transit",
+				"_type": "data",
+				"_id": "H_boj2MBj7ZKb5OJ_lIw",
+				"_score": 1.0,
+				"_routing": "6521761-2012_08A-1208BRwd-Weekday-01",
+				"_source": {
+					"trip_id": "6521761-2012_08A-1208BRwd-Weekday-01",
+					"arrival_time": "05:58:00",
+					"departure_time": "05:58:00",
+					"stop_id": 9078,
+					"stop_sequence": 2,
+					"transit_join": {
+						"name": "stoptimes",
+						"parent": "6521761-2012_08A-1208BRwd-Weekday-01"
+					},
+					"name_stop": "sheldrake Lake Park & Ride (to Halifax)"
+				}
+			},
+			{
+				"_index": "transit",
+				"_type": "data",
+				"_id": "IPboj2MBj7ZKb5OJ_lIw",
+				"_score": 1.0,
+				"_routing": "6521761-2012_08A-1208BRwd-Weekday-01",
+				"_source": {
+					"trip_id": "6521761-2012_08A-1208BRwd-Weekday-01",
+					"arrival_time": "06:26:00",
+					"departure_time": "06:26:00",
+					"stop_id": 9061,
+					"stop_sequence": 3,
+					"transit_join": {
+						"name": "stoptimes",
+						"parent": "6521761-2012_08A-1208BRwd-Weekday-01"
+					},
+					"name_stop": "albemarle St after Duke St (metrox)"
+				}
+			},
+
+
+
+
+
+
+d:
+
+{
+	"took": 141,
+	"timed_out": false,
+	"_shards": {
+		"total": 5,
+		"successful": 5,
+		"skipped": 0,
+		"failed": 0
+	},
+	"hits": {
+		"total": 588099,
+		"max_score": 0.0,
+		"hits": []
+	},
+	"aggregations": {
+		"group_by_state": {
+			"doc_count_error_upper_bound": 1492,
+			"sum_other_doc_count": 566052,
+			"buckets": [
+				{
+					"key": 8643,
+					"doc_count": 2682,
+					"top_three_busy_stops": {
+						"hits": {
+							"total": 2682,
+							"max_score": 1.0,
+							"hits": [
+								{
+									"_index": "transit",
+									"_type": "data",
+									"_id": "Q_Hmj2MBj7ZKb5OJ7COQ",
+									"_score": 1.0,
+									"_routing": "6518999-2012_05M-1205BRsu-Sunday-02",
+									"_source": {
+										"name_stop": "mumford Terminal [outbound In Terminal]"
+									}
+								}
+							]
+						}
+					}
+				},
+				{
+					"key": 6105,
+					"doc_count": 2607,
+					"top_three_busy_stops": {
+						"hits": {
+							"total": 2607,
+							"max_score": 1.0,
+							"hits": [
+								{
+									"_index": "transit",
+									"_type": "data",
+									"_id": "PvHmj2MBj7ZKb5OJ7BSC",
+									"_score": 1.0,
+									"_routing": "6516343-2012_05M-1205BRsa-Saturday-02",
+									"_source": {
+										"name_stop": "barrington St [southbound] before Duke St"
+									}
+								}
+							]
+						}
+					}
+				},
+				{
+					"key": 6108,
+					"doc_count": 2260,
+					"top_three_busy_stops": {
+						"hits": {
+							"total": 2260,
+							"max_score": 1.0,
+							"hits": [
+								{
+									"_index": "transit",
+									"_type": "data",
+									"_id": "P_Hmj2MBj7ZKb5OJ7BSC",
+									"_score": 1.0,
+									"_routing": "6516343-2012_05M-1205BRsa-Saturday-02",
+									"_source": {
+										"name_stop": "barrington St [southbound] before George St"
+									}
+								}
+							]
+						}
+					}
+				}
+			]
+		}
+	}
+}

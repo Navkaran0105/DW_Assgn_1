@@ -1,0 +1,107 @@
+/*
+Elastic Search Queries
+*/
+
+a)
+{
+  "query": {
+    "has_child": {
+      "type": "stoptimes",
+      "query": {
+        "bool": {
+          "must": [
+    				{
+    					"match": {
+								"name_stop": "south Park St [northbound] after South St"
+							}
+    				}
+    			]
+        }
+      }
+    }
+  },
+	"size":0,
+	"aggregations": {
+    "distinct": {
+        "terms": {
+            "field": "trip_headsign"
+        }
+    }
+	}
+}
+
+b)
+{
+  "query": {
+    "has_child": {
+      "type": "stoptimes",
+      "query": {
+        "range" : {
+          "arrival_time" : {
+              "gte": "18:00:00",
+              "lte": "22:00:00",
+              "format": "HH:mm:ss"
+          }
+        }
+      }
+    }
+  },
+	"size":0,
+	"aggregations": {
+    "distinct": {
+        "terms": {
+            "field": "trip_headsign"
+        }
+    }
+	}
+}
+
+c)
+{
+  "query": {
+    "has_parent": {
+      "parent_type": "trips",
+      "query": {
+        "bool": {
+          "must": [
+    				{
+							"match": {
+								"trip_headsign": "330 HALIFAX"
+							}
+						},
+						{
+							"match": {
+								"route_id": "330-114" 
+							}
+						}
+						
+    			]
+        }
+      }
+    }
+  }
+}
+
+d)
+
+{
+  "size": 0,
+	"aggs": {
+		"group_by_state": {
+			"terms": {
+				"field": "stop_id",
+				"size" : 3
+			},
+			"aggregations": {
+				"top_three_busy_stops": {
+					"top_hits": {
+						"_source": {
+								"includes": [ "name_stop" ]
+						},
+						"size" : 1
+					}
+				}
+			}
+		}
+	}
+}

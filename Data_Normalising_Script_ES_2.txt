@@ -1,0 +1,28 @@
+require 'json'
+
+input = File.read('stops_array.json')
+stops_data = JSON.parse(input)
+hash=stops_data.map{|e| [e["stop_id"],e["name_stop"]]}.to_h
+
+stoptimes_file = File.read('stoptimes_array.json')
+stoptimes_json = JSON.parse(stoptimes_file)
+
+File.open('stoptimesstops.json', 'w') do |file|
+  stoptimes_json.each do |record|
+    index = {
+      "index": {
+        "_index": "transit",
+        "_type": "data",
+        "_routing": record["trip_id"]
+      }
+    }
+    record = record.merge({
+      "transit_join": { "name": "stoptimes", "parent": record["trip_id"] },
+      "name_stop": hash[record["stop_id"]]
+    })
+    file.write index.to_json
+	file.write "\n"
+    file.write record.to_json
+	file.write "\n"
+  end
+end
